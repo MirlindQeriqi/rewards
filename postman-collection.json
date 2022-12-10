@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "678f4ee1-540c-4a1d-82c1-ad147ad2e367",
+		"name": "Rewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get transactions by date range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transactions?startDate=2022-12-01&endDate=2022-12-31&customerId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2022-12-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-12-31"
+						},
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate rewards directly",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 1,\n        \"amount\": 12.20,\n        \"date\": \"2022-12-09T17:55:03\",\n        \"customerId\": 1\n    },\n    {\n        \"id\": 2,\n        \"amount\": 50.50,\n        \"date\": \"2022-12-09T18:35:57\",\n        \"customerId\": 1\n    },\n    {\n        \"id\": 4,\n        \"amount\": 120.00,\n        \"date\": \"2022-12-09T18:41:39\",\n        \"customerId\": 1\n    },\n    {\n        \"id\": 5,\n        \"amount\": 100.00,\n        \"date\": \"2022-12-09T18:41:45\",\n        \"customerId\": 1\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/rewards",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rewards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\" : 100,\n    \"customerId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transactions/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete transaction by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transactions/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate rewards for customer, by date range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rewards?startDate=2022-12-01&endDate=2022-12-31&customerId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2022-12-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-12-31"
+						},
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

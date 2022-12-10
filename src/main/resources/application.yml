@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rewards-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/rewards?useSSL=false&serverTimezone=America/Los_Angeles&characterEncoding=UTF-8
+    username: root
+    password: root
+  jpa:
+    open-in-view: false
+  flyway:
+    url: jdbc:mysql://localhost:3306/?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Los_Angeles
+    user: root
+    password: root
+    schemas: rewards
+    baseline-on-migrate: true
+
+rewards:
+  minimum:
+    amount: 50
+    points: 1
+  maximum:
+    amount: 100
+    points: 2
