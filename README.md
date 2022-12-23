@@ -8,7 +8,7 @@ To run the application you have to run the maria db in docker, so:
 
 
 ### Running tests
-Tests are configured to be run on memory DB, which means you don't have to have the DB server running.
+Tests are configured to be run with an in-memory DB, which means you don't have to have the DB server running.
 - To run tests simply do `Run 'All tests'` in your IDE
 
 
