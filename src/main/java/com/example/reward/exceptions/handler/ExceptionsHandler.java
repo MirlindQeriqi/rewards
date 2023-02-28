@@ -1,9 +1,7 @@
 package com.example.reward.exceptions.handler;
 
 import com.example.reward.exceptions.dto.MessageExceptionDto;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -19,7 +17,6 @@ import java.util.stream.Collectors;
 @Log4j2
 @Order(2)
 @RestControllerAdvice
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class ExceptionsHandler {
 
     private static final String DOT = ". ";

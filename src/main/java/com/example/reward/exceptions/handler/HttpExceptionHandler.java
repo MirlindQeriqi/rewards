@@ -1,9 +1,7 @@
 package com.example.reward.exceptions.handler;
 
 import com.example.reward.exceptions.dto.MessageExceptionDto;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Log4j2
 @Order(1)
 @RestControllerAdvice
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class HttpExceptionHandler {
 
     @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
